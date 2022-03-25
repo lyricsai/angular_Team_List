@@ -1,0 +1,16 @@
+<form class="generatedList" (submit)="$event.preventDefault()">
+    <input
+        type="number"
+        placeholder="# of teams"
+        min="0"
+        #teamsNumber
+        (input)="onTeamsNumberInput(teamsNumber.value)"
+        [value]="teamsNumber"
+    />
+    <button (click)="onGenerateTeams()">Generate</button>
+    <button (click)="onReset()">Reset</button>
+</form>
+
+<p *ngIf="errorMessage" class="errorMessage">{{ errorMessage }}</p>
+
+<app-team [teams]="teams" [generated]="generated"></app-team>

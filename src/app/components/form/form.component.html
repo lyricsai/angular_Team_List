@@ -1,0 +1,11 @@
+<form action="#" (submit)="$event.preventDefault()">
+    <input
+        #addMemberInput
+        (input)="onInput(addMemberInput.value)"
+        type="text"
+        placeholder="Name"
+        [formControl]="name"
+        autocomplete="name"
+    />
+    <button (click)="addMember()">Add</button>
+</form>

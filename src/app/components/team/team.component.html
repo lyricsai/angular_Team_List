@@ -1,0 +1,10 @@
+<div *ngIf="generated" class="teams__container">
+    <ul class="team__container">
+        <li *ngFor="let team of teams; let i = index">
+            <h3>Team {{ i + 1 }}</h3>
+            <ul>
+                <li *ngFor="let member of team">{{ member | titlecase }}</li>
+            </ul>
+        </li>
+    </ul>
+</div>

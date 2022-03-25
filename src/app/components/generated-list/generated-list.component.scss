@@ -1,0 +1,16 @@
+.errorMessage {
+    margin: 30px auto;
+    color: #900;
+    max-width: 300px;
+    align-self: center;
+}
+form {
+    flex: 0 0 300px;
+    align-self: center;
+    margin: 15px;
+
+    & input {
+        max-width: 100px;
+        margin-right: 10px;
+    }
+}
